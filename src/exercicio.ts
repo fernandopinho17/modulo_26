@@ -1,4 +1,4 @@
-function multiplicacao(...numeros: number[] ) {
+function multiplicacaoDosNumeros(n1: number , n2: number): number {
     return 10 * 20;
 }
 
