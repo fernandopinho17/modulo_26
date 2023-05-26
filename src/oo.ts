@@ -14,13 +14,17 @@ class pessoa {
 
 class ContaBancaria {
     protected saldo: number = 0;
-    numeroConta: number;
+    public numeroConta: number;
 
     constructor(numeroDaConta: number) {
         this.numeroConta = numeroDaConta;
     }
     
-    getSaldo() {
+    static retornNumeroDoBanco() {
+        return 125;
+    }
+    
+    private getSaldo() {
         return this.saldo;
     }
 
@@ -34,3 +38,7 @@ class ContaBancariaPessoaFisica extends ContaBancaria {
         this.saldo = valor * 2;
     }
 }
+
+const contaDoPedro = new ContaBancariaPessoaFisica(123456)
+//contaDoPedro
+ContaBancaria.retornNumeroDoBanco()

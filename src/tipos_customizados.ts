@@ -1,7 +1,13 @@
-const alunos = [
+type aluno = {
+    nome: string;
+    cursos?: string [];
+    idade: number;
+}
+
+const alunos: aluno[] = [
     {
         nome: "Carlos",
-        curso: ["Front-end", "UX/UI"],
+        cursos: ["Front-end", "UX/UI"],
         idade: 27,
     },
     {
@@ -16,3 +22,12 @@ alunos.push({
     cursos: ["Arquitetura"],
     idade: 29
 })
+
+const novoAluno: aluno = {
+    nome: "Lucas",
+    idade: 32,
+}
+
+function exibeAluno(aluno: aluno) {
+    console.log(aluno.nome)
+}
